@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.google.gson.GsonBuilder;
 
+import org.jsoup.Jsoup;
 import org.w3c.dom.Document;
 
 import java.io.IOException;
