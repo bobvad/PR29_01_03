@@ -1,6 +1,7 @@
 package com.example.gps29_degtinnikov;
 
 import android.Manifest;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;

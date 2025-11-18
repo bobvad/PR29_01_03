@@ -1,33 +1,31 @@
 package com.example.gps29_degtinnikov;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class AddressResponse {
+    public Response response;
 
-    public Response.GeoObjectCollection response;
+    public static class Response {
+        public GeoObjectCollection GeoObjectCollection;
+    }
 
-    public class Response {
-        public class GeoObjectCollection {
-            public class FeatureMember {
-                public class GeoObject {
-                    public class MetaDataProperty {
-                        public class GeocoderMetaData {
-                            public String text;
-                        }
+    public static class GeoObjectCollection {
+        public List<FeatureMember> featureMember;
+    }
 
-                        public GeocoderMetaData GeocoderMetaData;
-                    }
+    public static class FeatureMember {
+        public GeoObject GeoObject;
+    }
 
-                    public MetaDataProperty metaDataProperty;
-                    public GeoObject GeoObject;
-                }
+    public static class GeoObject {
+        public MetaDataProperty metaDataProperty;
+    }
 
-                public ArrayList<FeatureMember> featureMember;
-            }
+    public static class MetaDataProperty {
+        public GeocoderMetaData GeocoderMetaData;
+    }
 
-            public GeoObjectCollection GeoObjectCollection;
-        }
-
-        public Response response;
+    public static class GeocoderMetaData {
+        public String text;
     }
 }
